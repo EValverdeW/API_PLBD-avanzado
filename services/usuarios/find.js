@@ -10,7 +10,7 @@ async function _findByUsername(username) {
     }
 
     const user = await db.usuario.findOne({
-        where: { username }   // 🔥 Esto está bien si la columna se llama exactamente "username"
+        where: { username }   
     });
 
     console.log("Resultado de búsqueda en Oracle:", user);

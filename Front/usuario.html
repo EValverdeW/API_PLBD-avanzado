@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestión de Usuarios</title>
+  <style>
+    body { font-family: Arial; margin: 40px; }
+    input, button { margin: 5px; padding: 8px; }
+    table { border-collapse: collapse; width: 100%; margin-top: 20px; }
+    th, td { border: 1px solid #ddd; padding: 8px; }
+    th { background-color: #0078D7; color: white; }
+  </style>
+</head>
+<body>
+  <h1>Usuarios</h1>
+
+  <h3>Registrar nuevo usuario</h3>
+  <form id="formUsuario">
+    <input type="text" id="username" placeholder="Nombre de usuario" required />
+    <input type="password" id="password" placeholder="Contraseña" required />
+    <input type="email" id="email" placeholder="Correo" required />
+    <input type="text" id="estado" placeholder="Estado" required />
+    <input type="number" id="idRol" placeholder="ID Rol" required />
+    <button type="submit">Guardar</button>
+  </form>
+
+  <h3>Lista de Usuarios</h3>
+  <table id="tablaUsuarios">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Usuario</th>
+        <th>Email</th>
+        <th>Estado</th>
+        <th>Rol</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script>
+    
+   const API_URL = 'http://localhost:3000/auth/signup';
+
+
+    // Mostrar usuarios
+    async function cargarUsuarios() {
+      const res = await fetch(API_URL);
+      const data = await res.json();
+      const tbody = document.querySelector('#tablaUsuarios tbody');
+      tbody.innerHTML = '';
+      data.forEach(u => {
+        const fila = `<tr>
+          <td>${u.id}</td>
+          <td>${u.username}</td>
+          <td>${u.email}</td>
+          <td>${u.estado}</td>
+          <td>${u.idRol}</td>
+        </tr>`;
+        tbody.innerHTML += fila;
+      });
+    }
+
+    // Registrar usuario
+    document.querySelector('#formUsuario').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const nuevo = {
+        username: document.getElementById('username').value,
+        password: document.getElementById('password').value,
+        email: document.getElementById('email').value,
+        estado: document.getElementById('estado').value,
+        idRol: document.getElementById('idRol').value
+      };
+      const res = await fetch(API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(nuevo)
+      });
+      if (res.ok) {
+        alert('Usuario registrado correctamente');
+        cargarUsuarios();
+        e.target.reset();
+      } else {
+        alert('Error al registrar usuario');
+      }
+    });
+
+    cargarUsuarios();
+  </script>
+</body>
+</html>

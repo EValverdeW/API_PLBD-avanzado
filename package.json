@@ -1,0 +1,31 @@
+{
+  "name": "api_plbd",
+  "version": "1.0.0",
+  "description": "Sistema Web Node.js con Base de datos Oracle Developer",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/natycampos1/API_PLBD.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/natycampos1/API_PLBD/issues"
+  },
+  "homepage": "https://github.com/natycampos1/API_PLBD#readme",
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "oracledb": "https://github.com/oracle/node-oracledb/releases/download/v5.3.0/oracledb-src-5.3.0.tgz",
+    "sequelize-oracle": "^3.3.2-0.0"
+  },
+  "devDependencies": {
+    "sequelize-cli": "^6.6.3"
+  }
+}

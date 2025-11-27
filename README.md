@@ -1,2 +1,2 @@
-# API_PLBD-avanzado
-API DEL CURSO.
+# API_PLBD
+Sistema Web Node.js con Base de datos Oracle Developer

@@ -1,323 +1,229 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Panel de control del Instituto Académico">
-    <meta name="author" content="">
+    <title>Instituto Académico - Gestión de Estudiantes</title>
 
-    <title>Instituto Académico - Dashboard</title>
+    <!-- Fuentes y Estilos -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-sb-admin-2/4.1.4/css/sb-admin-2.min.css" rel="stylesheet">
 
-    <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900"
-        rel="stylesheet">
-
-    <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <style>
+        body { font-family: "Nunito", sans-serif; background-color: #f4f6f9; }
+        .sidebar { background: linear-gradient(180deg, #4e73df 10%, #224abe 100%) !important; }
+        .sidebar .nav-item .nav-link { padding: 12px 20px; border-radius: 8px; transition: 0.2s; }
+        .sidebar .nav-item .nav-link:hover { background-color: rgba(255,255,255,0.15); transform: translateX(5px); }
+        .card { border-radius: 16px !important; border: none; transition: 0.25s; }
+        .card:hover { transform: translateY(-4px); box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); }
+    </style>
 </head>
 
 <body id="page-top">
+<div id="wrapper">
 
-    <!-- Page Wrapper -->
-    <div id="wrapper">
+    <!-- Sidebar -->
+    <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+            <div class="sidebar-brand-text mx-3">Instituto</div>
+        </a>
+        <hr class="sidebar-divider">
+        <div class="sidebar-heading">Gestión Académica</div>
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+    <li class="nav-item"><a class="nav-link" href="rol.html">Roles</a></li>
+    <li class="nav-item"><a class="nav-link" href="usuario.html">Usuarios</a></li>
+    <li class="nav-item"><a class="nav-link" href="profesor.html">Profesores</a></li>
+    <li class="nav-item"><a class="nav-link" href="carrera.html">Carreras</a></li>
+    <li class="nav-item"><a class="nav-link" href="curso.html">Cursos</a></li>
+    <li class="nav-item"><a class="nav-link" href="encargado.html">Encargados</a></li>
+    <li class="nav-item active"><a class="nav-link" href="encargado_estudiante.html">Encargados - Estudiante</a></li>
+    <li class="nav-item"><a class="nav-link" href="estudiante.html">Estudiantes</a></li>
+    <li class="nav-item"><a class="nav-link" href="matricula.html">Matrícula</a></li>
+    <li class="nav-item"><a class="nav-link" href="pago.html">Pagos</a></li>
+    <li class="nav-item"><a class="nav-link" href="tipo_pago.html">Tipos de Pago</a></li>
+    <li class="nav-item"><a class="nav-link" href="calificacion.html">Calificaciones</a></li>
+    <li class="nav-item"><a class="nav-link" href="asistencia.html">Asistencias</a></li>
+        <hr class="sidebar-divider d-none d-md-block">
+    </ul>
+    <!-- End Sidebar -->
 
-        <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+    <!-- Content Wrapper -->
+    <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
 
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3">Instituto</div>
-            </a>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Gestión Académica
-            </div>
-
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
-            </li>
-
-            <!-- Nav Item - ROL -->
-            <li class="nav-item">
-                <a class="nav-link" href="rol.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Roles</span></a>
-            </li>
-
-            <!-- Nav Item - USUARIO -->
-            <li class="nav-item">
-                <a class="nav-link" href="usuario.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Usuarios</span></a>
-            </li>
-
-            <!-- Nav Item - PROFESOR -->
-            <li class="nav-item">
-                <a class="nav-link" href="profesor.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Profesores</span></a>
-            </li>
-
-            <!-- Nav Item - CARRERA -->
-            <li class="nav-item">
-                <a class="nav-link" href="carrera.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Carreras</span></a>
-            </li>
-
-            <!-- Nav Item - CURSO -->
-            <li class="nav-item">
-                <a class="nav-link" href="curso.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Cursos</span></a>
-            </li>
-
-            <!-- Nav Item - ENCARGADO -->
-            <li class="nav-item">
-                <a class="nav-link" href="encargado.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Encargados</span></a>
-            </li>
-
-            <!-- Nav Item - ESTUDIANTE -->
-            <li class="nav-item">
-                <a class="nav-link" href="estudiante.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Estudiantes</span></a>
-            </li>
-
-            <!-- Nav Item - MATRICULA -->
-            <li class="nav-item">
-                <a class="nav-link" href="matricula.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Matrícula</span></a>
-            </li>
-
-            <!-- Nav Item - PAGO -->
-            <li class="nav-item">
-                <a class="nav-link" href="pago.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Pagos</span></a>
-            </li>
-
-            <!-- Nav Item - CALIFICACION -->
-            <li class="nav-item">
-                <a class="nav-link" href="calificacion.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Calificacion</span></a>
-            </li>
-
-            <!-- Nav Item - ASISTENCIA -->
-            <li class="nav-item">
-                <a class="nav-link" href="asistencia.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Asistencias</span></a>
-            </li>
-
-            <!-- Nav Item - ENCARGADO_ESTUDIANTE -->
-            <li class="nav-item">
-                <a class="nav-link" href="encargado_estudiante.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Encargado - Estudiante</span></a>
-            </li>
-
-            <!-- Nav Item - TIPO_PAGO -->
-            <li class="nav-item">
-                <a class="nav-link" href="tipo_pago.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tipos de Pago</span></a>
-            </li>
-
-
-
-<div class="text-center d-none d-md-inline">
-    <button class="rounded-circle border-0" id="sidebarToggle"></button>
-</div>
-</ul>
-<!-- End of Sidebar -->
-
-<!-- Content Wrapper -->
-<div id="content-wrapper" class="d-flex flex-column">
-
-    <!-- Main Content -->
-    <div id="content">
-
-        <!-- Topbar -->
-        <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-            <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                <i class="fa fa-bars"></i>
-            </button>
-
-            <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                <div class="input-group">
-                    <input type="text" class="form-control bg-light border-0 small"
-                        placeholder="Buscar estudiante..." aria-label="Search" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                        <button class="btn btn-primary" type="button">
-                            <i class="fas fa-search fa-sm"></i>
-                        </button>
+            <!-- Topbar -->
+            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 shadow">
+                <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 navbar-search">
+                    <div class="input-group">
+                        <input type="text" class="form-control bg-light border-0 small" placeholder="Buscar estudiante...">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button"><i class="fas fa-search fa-sm"></i></button>
+                        </div>
                     </div>
-                </div>
-            </form>
-
-            <ul class="navbar-nav ml-auto">
-                <div class="topbar-divider d-none d-sm-block"></div>
-                <li class="nav-item dropdown no-arrow">
-                    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <span class="mr-2 d-none d-lg-inline text-gray-600 small">Administrador</span>
-                        <img class="img-profile rounded-circle" src="img/profile.svg">
-                    </a>
-                    <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                        aria-labelledby="userDropdown">
-                        <a class="dropdown-item" href="#"><i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>Perfil</a>
-                        <a class="dropdown-item" href="#"><i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>Configuración</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>Cerrar sesión
+                </form>
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown no-arrow">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Administrador</span>
+                            <img class="img-profile rounded-circle" src="img/profile.svg">
                         </a>
-                    </div>
-                </li>
-            </ul>
-        </nav>
-        <!-- End of Topbar -->
+                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in">
+                            <a class="dropdown-item" href="#">Perfil</a>
+                            <a class="dropdown-item" href="#">Configuración</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-danger" href="login.html">Cerrar sesión</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <!-- End Topbar -->
 
-        <!-- Begin Page Content -->
-        <div class="container-fluid">
+            <!-- Contenido Principal -->
+            <div class="container-fluid">
+                <h1 class="h3 mb-4 text-gray-800">Gestión de Estudiantes</h1>
 
-            <!-- Encabezado -->
-            <h1 class="h3 mb-4 text-gray-800">Gestión de Estudiantes del Instituto</h1>
-
-            <!-- Tabla de Estudiantes -->
-            <div class="card shadow mb-4">
-                <div class="card-header py-3 bg-primary text-white d-flex justify-content-between align-items-center">
-                    <h6 class="m-0 font-weight-bold">Listado de Estudiantes Registrados</h6>
-                    <button class="btn btn-light btn-sm"><i class="fas fa-plus"></i> Agregar Estudiante</button>
-                </div>
-
-                <div class="card-body">
-                    <div class="table-responsive">
-                        <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
-                            <thead class="bg-light text-center">
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Nombre</th>
-                                    <th>Apellidos</th>
-                                    <th>Email</th>
-                                    <th>Fecha de Nacimiento</th>
-                                    <th>Teléfono</th>
-                                    <th>Dirección</th>
-                                    <th>ID Carrera</th>
-                                </tr>
-                            </thead>
-                            <tbody class="text-center">
-                                <tr><td>1</td><td>Laura</td><td>Ramírez Solano</td><td>laura.ramirez1@uni.cr</td><td>2001-02-14</td><td>8888-1001</td><td>San José, Costa Rica</td><td>1</td></tr>
-                                <tr><td>2</td><td>José</td><td>Méndez Arias</td><td>jose.mendez@uni.cr</td><td>2000-11-22</td><td>8888-1002</td><td>Cartago, Costa Rica</td><td>2</td></tr>
-                                <tr><td>3</td><td>María</td><td>Gómez Porras</td><td>maria.gomez@uni.cr</td><td>2002-03-05</td><td>8888-1003</td><td>Heredia, Costa Rica</td><td>3</td></tr>
-                                <tr><td>4</td><td>Carlos</td><td>Jiménez Ruiz</td><td>carlos.jimenez@uni.cr</td><td>1999-09-18</td><td>8888-1004</td><td>Alajuela, Costa Rica</td><td>4</td></tr>
-                                <tr><td>5</td><td>Daniela</td><td>Chaves Mora</td><td>daniela.chaves@uni.cr</td><td>2001-07-09</td><td>8888-1005</td><td>Puntarenas, Costa Rica</td><td>5</td></tr>
-                                <tr><td>6</td><td>Andrés</td><td>Hernández López</td><td>andres.hernandez@uni.cr</td><td>2000-05-30</td><td>8888-1006</td><td>Limón, Costa Rica</td><td>6</td></tr>
-                                <tr><td>7</td><td>Sofía</td><td>Vargas Soto</td><td>sofia.vargas@uni.cr</td><td>2002-06-25</td><td>8888-1007</td><td>San José, Costa Rica</td><td>1</td></tr>
-                                <tr><td>8</td><td>Ricardo</td><td>Araya Castro</td><td>ricardo.araya@uni.cr</td><td>2001-08-11</td><td>8888-1008</td><td>Cartago, Costa Rica</td><td>2</td></tr>
-                                <tr><td>9</td><td>Gabriela</td><td>Salas León</td><td>gabriela.salas@uni.cr</td><td>2003-01-29</td><td>8888-1009</td><td>Heredia, Costa Rica</td><td>3</td></tr>
-                                <tr><td>10</td><td>Pablo</td><td>Cordero Méndez</td><td>pablo.cordero@uni.cr</td><td>1999-12-12</td><td>8888-1010</td><td>Alajuela, Costa Rica</td><td>4</td></tr>
-                            </tbody>
-                        </table>
+                <!-- Registrar Estudiante -->
+                <div class="card mb-4">
+                    <div class="card-header bg-success text-white">Registrar Estudiante</div>
+                    <div class="card-body">
+                        <input id="nombreEstudiante" type="text" class="form-control mb-2" placeholder="Nombre">
+                        <input id="apellidoEstudiante" type="text" class="form-control mb-2" placeholder="Apellidos">
+                        <input id="emailEstudiante" type="email" class="form-control mb-2" placeholder="Email">
+                        <input id="fechaNacimientoEstudiante" type="date" class="form-control mb-2">
+                        <input id="telefonoEstudiante" type="text" class="form-control mb-2" placeholder="Teléfono">
+                        <input id="direccionEstudiante" type="text" class="form-control mb-2" placeholder="Dirección">
+                        <input id="idCarreraEstudiante" type="number" class="form-control mb-2" placeholder="ID Carrera">
+                        <button onclick="crearEstudiante()" class="btn btn-success">Registrar</button>
                     </div>
                 </div>
+
+                <!-- Listar Estudiantes -->
+                <div class="card mb-4">
+                    <div class="card-header bg-info text-white">Estudiantes Registrados</div>
+                    <div class="card-body">
+                        <button onclick="listarEstudiantes()" class="btn btn-primary mb-3">Cargar Estudiantes</button>
+                        <div class="table-responsive" style="max-height:400px; overflow:auto;">
+                            <table class="table table-striped table-bordered" id="tablaEstudiantes">
+                                <thead class="table-dark text-center">
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nombre</th>
+                                        <th>Apellidos</th>
+                                        <th>Email</th>
+                                        <th>Fecha de Nacimiento</th>
+                                        <th>Teléfono</th>
+                                        <th>Dirección</th>
+                                        <th>ID Carrera</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center"></tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Actualizar Estudiante -->
+                <div class="card mb-4">
+                    <div class="card-header bg-warning text-dark">Actualizar Estudiante</div>
+                    <div class="card-body">
+                        <input id="updateIdEstudiante" type="number" class="form-control mb-2" placeholder="ID del estudiante">
+                        <input id="updateNombreEstudiante" type="text" class="form-control mb-2" placeholder="Nuevo nombre">
+                        <input id="updateApellidoEstudiante" type="text" class="form-control mb-2" placeholder="Nuevos apellidos">
+                        <input id="updateEmailEstudiante" type="email" class="form-control mb-2" placeholder="Nuevo email">
+                        <input id="updateFechaNacimientoEstudiante" type="date" class="form-control mb-2">
+                        <input id="updateTelefonoEstudiante" type="text" class="form-control mb-2" placeholder="Nuevo teléfono">
+                        <input id="updateDireccionEstudiante" type="text" class="form-control mb-2" placeholder="Nueva dirección">
+                        <input id="updateIdCarreraEstudiante" type="number" class="form-control mb-2" placeholder="Nuevo ID Carrera">
+                        <button onclick="actualizarEstudiante()" class="btn btn-warning">Actualizar</button>
+                    </div>
+                </div>
+
+                <!-- Eliminar Estudiante -->
+                <div class="card mb-4">
+                    <div class="card-header bg-danger text-white">Eliminar Estudiante</div>
+                    <div class="card-body">
+                        <input id="deleteIdEstudiante" type="number" class="form-control mb-2" placeholder="ID a eliminar">
+                        <button onclick="eliminarEstudiante()" class="btn btn-danger">Eliminar</button>
+                    </div>
+                </div>
+
             </div>
+            <!-- End Contenido Principal -->
 
         </div>
-        <!-- End Page Content -->
+        <!-- End Main Content -->
 
-    </div>
-    <!-- End Main Content -->
-
-             
-            <!-- Footer -->
+        <!-- Footer -->
         <footer class="sticky-footer bg-white">
-            <div class="container my-auto">
-                <div class="copyright text-center my-auto">
-                    <span>Copyright &copy; Instituto Académico 2025 - Todos los derechos reservados</span>
-                </div>
+            <div class="container text-center">
+                <span>© Instituto Académico 2025 - Todos los derechos reservados</span>
             </div>
         </footer>
-        <!-- End of Footer -->
-
+        <!-- End Footer -->
     </div>
-    <!-- End of Content Wrapper -->
-
+    <!-- End Content Wrapper -->
 </div>
-<!-- End of Page Wrapper -->
+<!-- End Page Wrapper -->
 
-<!-- Scroll to Top Button-->
-<a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-</a>
+<!-- Scripts -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-sb-admin-2/4.1.4/js/sb-admin-2.min.js"></script>
 
-<!-- Logout Modal-->
-<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title text-primary" id="logoutModalLabel">¿Deseas cerrar sesión?</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Cerrar">
-                    <span aria-hidden="true">×</span>
-                </button>
-            </div>
-            <div class="modal-body">
-                Selecciona <strong>"Cerrar sesión"</strong> si deseas finalizar tu sesión actual en el sistema del instituto.
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                <a class="btn btn-primary" href="login.html">Cerrar sesión</a>
-            </div>
-        </div>
-    </div>
-</div>
+<script>
+const API_ESTUDIANTES = "http://localhost:3000/estudiante";
 
-<!-- Bootstrap core JavaScript -->
-<script src="vendor/jquery/jquery.min.js"></script>
-<script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+async function crearEstudiante() {
+    const data = {
+        nombre: document.getElementById("nombreEstudiante").value,
+        apellidos: document.getElementById("apellidoEstudiante").value,
+        email: document.getElementById("emailEstudiante").value,
+        fechaNacimiento: document.getElementById("fechaNacimientoEstudiante").value,
+        telefono: document.getElementById("telefonoEstudiante").value,
+        direccion: document.getElementById("direccionEstudiante").value,
+        idCarrera: parseInt(document.getElementById("idCarreraEstudiante").value)
+    };
+    const res = await fetch(API_ESTUDIANTES, {method:"POST", headers:{'Content-Type':'application/json'}, body:JSON.stringify(data)});
+    alert(await res.text());
+}
 
-<!-- Core plugin JavaScript -->
-<script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+async function listarEstudiantes() {
+    const res = await fetch(API_ESTUDIANTES);
+    const data = await res.json();
+    const tbody = document.getElementById("tablaEstudiantes").getElementsByTagName("tbody")[0];
+    tbody.innerHTML = "";
+    data.forEach(item => {
+        const fila = document.createElement("tr");
+        fila.innerHTML = `<td>${item.id}</td><td>${item.nombre}</td><td>${item.apellidos}</td><td>${item.email}</td>
+                          <td>${item.fechaNacimiento}</td><td>${item.telefono}</td><td>${item.direccion}</td><td>${item.idCarrera}</td>`;
+        tbody.appendChild(fila);
+    });
+}
 
-<!-- Custom scripts for all pages -->
-<script src="js/sb-admin-2.min.js"></script>
+async function actualizarEstudiante() {
+    const id = document.getElementById("updateIdEstudiante").value;
+    const data = {
+        nombre: document.getElementById("updateNombreEstudiante").value,
+        apellidos: document.getElementById("updateApellidoEstudiante").value,
+        email: document.getElementById("updateEmailEstudiante").value,
+        fechaNacimiento: document.getElementById("updateFechaNacimientoEstudiante").value,
+        telefono: document.getElementById("updateTelefonoEstudiante").value,
+        direccion: document.getElementById("updateDireccionEstudiante").value,
+        idCarrera: parseInt(document.getElementById("updateIdCarreraEstudiante").value)
+    };
+    const res = await fetch(API_ESTUDIANTES + "/" + id, {method:"PUT", headers:{'Content-Type':'application/json'}, body:JSON.stringify(data)});
+    alert(await res.text());
+}
 
-<!-- Page level plugins -->
-<script src="vendor/datatables/jquery.dataTables.min.js"></script>
-<script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
-
-<!-- Page level custom scripts -->
-<script src="js/demo/datatables-demo.js"></script>
+async function eliminarEstudiante() {
+    const id = document.getElementById("deleteIdEstudiante").value;
+    const res = await fetch(API_ESTUDIANTES + "/" + id, {method:"DELETE"});
+    alert(await res.text());
+}
+</script>
 
 </body>
 </html>

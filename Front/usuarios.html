@@ -1,430 +1,286 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Panel de control del Instituto Académico">
-    <meta name="author" content="">
+    <meta charset="UTF-8">
+    <title>Gestión de Usuarios</title>
 
-    <title>Instituto Académico - Dashboard</title>
+    <!-- FUENTES -->
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,900" rel="stylesheet">
 
-    <!-- Custom fonts for this template-->
-    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet">
+    <!-- BOOTSTRAP + SB ADMIN 2 -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-sb-admin-2/4.1.4/css/sb-admin-2.min.css" rel="stylesheet">
 
-    <!-- Custom styles for this template-->
-    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: "Nunito", sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .sidebar {
+            background: linear-gradient(180deg, #4e73df 10%, #224abe 100%) !important;
+        }
+
+        .sidebar .nav-item .nav-link {
+            padding: 12px 20px;
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+
+        .sidebar .nav-item .nav-link:hover {
+            background-color: rgba(255,255,255,0.15);
+            transform: translateX(5px);
+        }
+
+        .card {
+            border-radius: 16px !important;
+            border: none;
+            transition: 0.25s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        footer {
+            border-top: 1px solid #ddd;
+        }
+    </style>
 </head>
-
 <body id="page-top">
 
-    <!-- Page Wrapper -->
-    <div id="wrapper">
+<div id="wrapper">
 
-        <!-- Sidebar -->
-        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+    <!-- SIDEBAR -->
+    <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+            <div class="sidebar-brand-text mx-3">Instituto</div>
+        </a>
+        <hr class="sidebar-divider">
+        <div class="sidebar-heading">Gestión Académica</div>
+         <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+    <li class="nav-item"><a class="nav-link" href="rol.html">Roles</a></li>
+    <li class="nav-item"><a class="nav-link" href="usuario.html">Usuarios</a></li>
+    <li class="nav-item"><a class="nav-link" href="profesor.html">Profesores</a></li>
+    <li class="nav-item"><a class="nav-link" href="carrera.html">Carreras</a></li>
+    <li class="nav-item"><a class="nav-link" href="curso.html">Cursos</a></li>
+    <li class="nav-item"><a class="nav-link" href="encargado.html">Encargados</a></li>
+    <li class="nav-item active"><a class="nav-link" href="encargado_estudiante.html">Encargados - Estudiante</a></li>
+    <li class="nav-item"><a class="nav-link" href="estudiante.html">Estudiantes</a></li>
+    <li class="nav-item"><a class="nav-link" href="matricula.html">Matrícula</a></li>
+    <li class="nav-item"><a class="nav-link" href="pago.html">Pagos</a></li>
+    <li class="nav-item"><a class="nav-link" href="tipo_pago.html">Tipos de Pago</a></li>
+    <li class="nav-item"><a class="nav-link" href="calificacion.html">Calificaciones</a></li>
+    <li class="nav-item"><a class="nav-link" href="asistencia.html">Asistencias</a></li>
+        <hr class="sidebar-divider d-none d-md-block">
+    </ul>
+    <!-- FIN SIDEBAR -->
 
-            <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-graduation-cap"></i>
-                </div>
-                <div class="sidebar-brand-text mx-3">Instituto</div>
-            </a>
+    <!-- CONTENIDO -->
+    <div id="content-wrapper" class="d-flex flex-column">
+        <div id="content">
 
-            <!-- Divider -->
-            <hr class="sidebar-divider my-0">
-
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item active">
-                <a class="nav-link" href="index.html">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
-            </li>
-
-            <!-- Divider -->
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
-                Gestión Académica
-            </div>
-
-
-            <!-- Nav Item - Tables -->
-            <li class="nav-item">
-                <a class="nav-link" href="tables.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
-            </li>
-
-            <!-- Nav Item - ROL -->
-            <li class="nav-item">
-                <a class="nav-link" href="rol.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Roles</span></a>
-            </li>
-
-            <!-- Nav Item - USUARIO -->
-            <li class="nav-item">
-                <a class="nav-link" href="usuario.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Usuarios</span></a>
-            </li>
-
-            <!-- Nav Item - PROFESOR -->
-            <li class="nav-item">
-                <a class="nav-link" href="profesor.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Profesores</span></a>
-            </li>
-
-            <!-- Nav Item - CARRERA -->
-            <li class="nav-item">
-                <a class="nav-link" href="carrera.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Carreras</span></a>
-            </li>
-
-            <!-- Nav Item - CURSO -->
-            <li class="nav-item">
-                <a class="nav-link" href="curso.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Cursos</span></a>
-            </li>
-
-            <!-- Nav Item - ENCARGADO -->
-            <li class="nav-item">
-                <a class="nav-link" href="encargado.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Encargados</span></a>
-            </li>
-
-            <!-- Nav Item - ESTUDIANTE -->
-            <li class="nav-item">
-                <a class="nav-link" href="estudiante.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Estudiantes</span></a>
-            </li>
-
-            <!-- Nav Item - MATRICULA -->
-            <li class="nav-item">
-                <a class="nav-link" href="matricula.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Matrícula</span></a>
-            </li>
-
-            <!-- Nav Item - PAGO -->
-            <li class="nav-item">
-                <a class="nav-link" href="pago.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Pagos</span></a>
-            </li>
-
-            <!-- Nav Item - CALIFICACION -->
-            <li class="nav-item">
-                <a class="nav-link" href="calificacion.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Calificacion</span></a>
-            </li>
-
-            <!-- Nav Item - ASISTENCIA -->
-            <li class="nav-item">
-                <a class="nav-link" href="asistencia.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Asistencias</span></a>
-            </li>
-
-            <!-- Nav Item - ENCARGADO_ESTUDIANTE -->
-            <li class="nav-item">
-                <a class="nav-link" href="encargado_estudiante.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Encargado - Estudiante</span></a>
-            </li>
-
-            <!-- Nav Item - TIPO_PAGO -->
-            <li class="nav-item">
-                <a class="nav-link" href="tipo_pago.html">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Tipos de Pago</span></a>
-            </li>
-            <!-- Divider -->
-            <hr class="sidebar-divider d-none d-md-block">
-
-            <!-- Sidebar Toggler -->
-            <div class="text-center d-none d-md-inline">
-                <button class="rounded-circle border-0" id="sidebarToggle"></button>
-            </div>
-        </ul>
-        <!-- End of Sidebar -->
-
-        <!-- Content Wrapper -->
-        <div id="content-wrapper" class="d-flex flex-column">
-
-            <!-- Main Content -->
-            <div id="content">
-
-                <!-- Topbar -->
-                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
-                    <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
-                        <i class="fa fa-bars"></i>
-                    </button>
-
-                    <form
-                        class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small"
-                                placeholder="Buscar usuario..." aria-label="Search" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-primary" type="button">
-                                    <i class="fas fa-search fa-sm"></i>
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-
-                    <ul class="navbar-nav ml-auto">
-                        <div class="topbar-divider d-none d-sm-block"></div>
-                        <li class="nav-item dropdown no-arrow">
-                            <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
-                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Administrador</span>
-                                <img class="img-profile rounded-circle" src="img/profile.svg">
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
-                                aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="#"><i
-                                        class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>Perfil</a>
-                                <a class="dropdown-item" href="#"><i
-                                        class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>Configuración</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
-                                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>Cerrar sesión
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                </nav>
-                <!-- End of Topbar -->
-
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
-
-                    <!-- Encabezado -->
-                    <h1 class="h3 mb-4 text-gray-800">Gestión de Usuarios del Instituto</h1>
-
-                    <!-- Tabla de Usuarios -->
-                    <div class="card shadow mb-4">
-                        <div
-                            class="card-header py-3 bg-primary text-white d-flex justify-content-between align-items-center">
-                            <h6 class="m-0 font-weight-bold">Listado de Usuarios Registrados</h6>
-                            <button class="btn btn-light btn-sm"><i class="fas fa-plus"></i> Agregar Usuario</button>
-                        </div>
-
-                        <div class="card-body">
-                            <div class="table-responsive">
-                                <table class="table table-bordered table-hover" id="dataTable" width="100%"
-                                    cellspacing="0">
-                                    <thead class="bg-light text-center">
-                                        <tr>
-                                            <th>ID</th>
-                                            <th>Username</th>
-                                            <th>Password</th>
-                                            <th>Email</th>
-                                            <th>Estado</th>
-                                            <th>ID Rol</th>
-                                            <th>Fecha Creación</th>
-                                            <th>Fecha Actualización</th>
-                                            <th>Fecha Eliminación</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="text-center">
-                                        <tr>
-                                            <td>1</td>
-                                            <td>admin01</td>
-                                            <td>pass01</td>
-                                            <td>admin01@correo.com</td>
-                                            <td>Activo</td>
-                                            <td>1</td>
-                                            <td>2025-11-12</td>
-                                            <td>2025-11-12</td>
-                                            <td>—</td>
-                                        </tr>
-                                        <tr>
-                                            <td>2</td>
-                                            <td>profe01</td>
-                                            <td>pass02</td>
-                                            <td>profe01@correo.com</td>
-                                            <td>Activo</td>
-                                            <td>2</td>
-                                            <td>2025-11-12</td>
-                                            <td>2025-11-12</td>
-                                            <td>—</td>
-                                        </tr>
-                                        <tr>
-                                            <td>3</td>
-                                            <td>estu01</td>
-                                            <td>pass03</td>
-                                            <td>estu01@correo.com</td>
-                                            <td>Activo</td>
-                                            <td>3</td>
-                                            <td>2025-11-12</td>
-                                            <td>2025-11-12</td>
-                                            <td>—</td>
-                                        </tr>
-                                        <tr>
-                                            <td>4</td>
-                                            <td>enc01</td>
-                                            <td>pass04</td>
-                                            <td>enc01@correo.com</td>
-                                            <td>Activo</td>
-                                            <td>4</td>
-                                            <td>2025-11-12</td>
-                                            <td>2025-11-12</td>
-                                            <td>—</td>
-                                        </tr>
-                                        <tr>
-                                            <td>5</td>
-                                            <td>coord01</td>
-                                            <td>pass05</td>
-                                            <td>coord01@correo.com</td>
-                                            <td>Activo</td>
-                                            <td>5</td>
-                                            <td>2025-11-12</td>
-                                            <td>2025-11-12</td>
-                                            <td>—</td>
-                                        </tr>
-                                        <tr>
-                                            <td>6</td>
-                                            <td>asis01</td>
-                                            <td>pass06</td>
-                                            <td>asis01@correo.com</td>
-                                            <td>Activo</td>
-                                            <td>6</td>
-                                            <td>2025-11-12</td>
-                                            <td>2025-11-12</td>
-                                            <td>—</td>
-                                        </tr>
-                                        <tr>
-                                            <td>7</td>
-                                            <td>sec01</td>
-                                            <td>pass07</td>
-                                            <td>sec01@correo.com</td>
-                                            <td>Activo</td>
-                                            <td>7</td>
-                                            <td>2025-11-12</td>
-                                            <td>2025-11-12</td>
-                                            <td>—</td>
-                                        </tr>
-                                        <tr>
-                                            <td>8</td>
-                                            <td>biblio01</td>
-                                            <td>pass08</td>
-                                            <td>biblio01@correo.com</td>
-                                            <td>Activo</td>
-                                            <td>8</td>
-                                            <td>2025-11-12</td>
-                                            <td>2025-11-12</td>
-                                            <td>—</td>
-                                        </tr>
-                                        <tr>
-                                            <td>9</td>
-                                            <td>seg01</td>
-                                            <td>pass09</td>
-                                            <td>seg01@correo.com</td>
-                                            <td>Activo</td>
-                                            <td>9</td>
-                                            <td>2025-11-12</td>
-                                            <td>2025-11-12</td>
-                                            <td>—</td>
-                                        </tr>
-                                        <tr>
-                                            <td>10</td>
-                                            <td>soporte01</td>
-                                            <td>pass10</td>
-                                            <td>soporte01@correo.com</td>
-                                            <td>Activo</td>
-                                            <td>10</td>
-                                            <td>2025-11-12</td>
-                                            <td>2025-11-12</td>
-                                            <td>—</td>
-                                        </tr>
-
-                                    </tbody>
-                                </table>
-                            </div>
+            <!-- TOPBAR -->
+            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 shadow">
+                <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 navbar-search">
+                    <div class="input-group">
+                        <input type="text" class="form-control bg-light border-0 small" placeholder="Buscar usuario...">
+                        <div class="input-group-append">
+                            <button class="btn btn-primary" type="button"><i class="fas fa-search fa-sm"></i></button>
                         </div>
                     </div>
+                </form>
 
-                </div>
-                <!-- End Page Content -->
+                <!-- USUARIO -->
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item dropdown no-arrow">
+                        <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown">
+                            <span class="ml-2 d-none d-lg-inline text-dark">Administrador del Instituto</span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right shadow">
+                            <a class="dropdown-item" href="#">Perfil</a>
+                            <a class="dropdown-item" href="#">Configuración</a>
+                            <div class="dropdown-divider"></div>
+                            <a class="dropdown-item text-danger" href="#">Cerrar sesión</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <!-- FIN TOPBAR -->
 
-            </div>
-            <!-- End Main Content -->
+            <!-- CONTENIDO PRINCIPAL -->
+            <div class="container-fluid py-4">
+                <h1 class="h3 mb-4 text-gray-800">Gestión de Usuarios</h1>
 
-            <!-- Footer -->
-            <footer class="sticky-footer bg-white">
-                <div class="container my-auto">
-                    <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Instituto Académico 2025 - Todos los derechos reservados</span>
+                <!-- Crear Usuario -->
+                <div class="card mb-4">
+                    <div class="card-header bg-primary text-white">Crear Usuario</div>
+                    <div class="card-body">
+                        <div class="mb-3">
+                            <input id="username" class="form-control" placeholder="Username">
+                        </div>
+                        <div class="mb-3">
+                            <input id="password" type="password" class="form-control" placeholder="Password">
+                        </div>
+                        <div class="mb-3">
+                            <input id="email" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="mb-3">
+                            <input id="estado" class="form-control" placeholder="Estado">
+                        </div>
+                        <div class="mb-3">
+                            <input id="idRol" type="number" class="form-control" placeholder="ID de Rol">
+                        </div>
+                        <button onclick="crearUsuario()" class="btn btn-success">Crear</button>
                     </div>
                 </div>
-            </footer>
-            <!-- End of Footer -->
 
-        </div>
-        <!-- End of Content Wrapper -->
-
-    </div>
-    <!-- End of Page Wrapper -->
-
-    <!-- Scroll to Top Button-->
-    <a class="scroll-to-top rounded" href="#page-top">
-        <i class="fas fa-angle-up"></i>
-    </a>
-
-    <!-- Logout Modal-->
-    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title text-primary" id="logoutModalLabel">¿Deseas cerrar sesión?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Cerrar">
-                        <span aria-hidden="true">×</span>
-                    </button>
+                <!-- Listar Usuarios -->
+                <div class="card mb-4">
+                    <div class="card-header bg-info text-white">Usuarios Registrados</div>
+                    <div class="card-body">
+                        <button onclick="listarUsuarios()" class="btn btn-primary mb-3">Cargar Usuarios</button>
+                        <div class="table-responsive" style="max-height:400px; overflow:auto;">
+                            <table class="table table-striped table-bordered" id="tablaUsuarios">
+                                <thead class="table-dark text-center">
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Username</th>
+                                        <th>Email</th>
+                                        <th>Estado</th>
+                                        <th>ID Rol</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="text-center"></tbody>
+                            </table>
+                        </div>
+                    </div>
                 </div>
-                <div class="modal-body">
-                    Selecciona <strong>"Cerrar sesión"</strong> si deseas finalizar tu sesión actual en el sistema del
-                    instituto.
+
+                <!-- Buscar Usuario -->
+                <div class="card mb-4">
+                    <div class="card-header bg-warning text-dark">Buscar Usuario por ID</div>
+                    <div class="card-body">
+                        <div class="input-group mb-3">
+                            <input id="buscarId" type="number" class="form-control" placeholder="ID del usuario">
+                            <button onclick="buscarUsuario()" class="btn btn-outline-secondary">Buscar</button>
+                        </div>
+                        <div id="resultado"></div>
+                    </div>
                 </div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancelar</button>
-                    <a class="btn btn-primary" href="login.html">Cerrar sesión</a>
+
+                <!-- Actualizar Usuario -->
+                <div class="card mb-4">
+                    <div class="card-header bg-secondary text-white">Actualizar Usuario</div>
+                    <div class="card-body">
+                        <input id="updateId" type="number" class="form-control mb-2" placeholder="ID del usuario">
+                        <input id="updateUsername" class="form-control mb-2" placeholder="Nuevo username">
+                        <input id="updateEmail" class="form-control mb-2" placeholder="Nuevo email">
+                        <input id="updateEstado" class="form-control mb-2" placeholder="Nuevo estado">
+                        <input id="updatePassword" class="form-control mb-2" placeholder="Nueva contraseña">
+                        <input id="updateIdRol" type="number" class="form-control mb-3" placeholder="Nuevo ID Rol">
+                        <button onclick="actualizarUsuario()" class="btn btn-warning">Actualizar</button>
+                    </div>
                 </div>
+
+                <!-- Eliminar Usuario -->
+                <div class="card mb-4">
+                    <div class="card-header bg-danger text-white">Eliminar Usuario</div>
+                    <div class="card-body">
+                        <div class="input-group mb-3">
+                            <input id="deleteId" type="number" class="form-control" placeholder="ID a eliminar">
+                            <button onclick="eliminarUsuario()" class="btn btn-danger">Eliminar</button>
+                        </div>
+                    </div>
+                </div>
+
             </div>
+            <!-- FIN CONTENIDO PRINCIPAL -->
+
         </div>
+
+        <!-- FOOTER -->
+        <footer class="sticky-footer bg-white">
+            <div class="container text-center">
+                <span>© Instituto Académico 2025 · Lenguajes de BD</span>
+            </div>
+        </footer>
     </div>
+</div>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- SCRIPTS -->
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-sb-admin-2/4.1.4/js/sb-admin-2.min.js"></script>
 
-    <!-- Core plugin JavaScript -->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+<script>
+    const API = "http://localhost:3000/usuarios";
 
-    <!-- Custom scripts for all pages -->
-    <script src="js/sb-admin-2.min.js"></script>
+    async function crearUsuario() {
+        const data = {
+            username: document.getElementById("username").value,
+            password: document.getElementById("password").value,
+            email: document.getElementById("email").value,
+            estado: document.getElementById("estado").value,
+            idRol: parseInt(document.getElementById("idRol").value)
+        };
+        const res = await fetch(API, {
+            method: "POST",
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(data)
+        });
+        alert(await res.text());
+    }
 
-    <!-- Page level plugins -->
-    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    async function listarUsuarios() {
+        const res = await fetch(API);
+        const data = await res.json();
+        const tbody = document.getElementById("tablaUsuarios").getElementsByTagName("tbody")[0];
+        tbody.innerHTML = "";
+        data.forEach(usuario => {
+            const fila = document.createElement("tr");
+            fila.innerHTML = `
+                <td>${usuario.id}</td>
+                <td>${usuario.username}</td>
+                <td>${usuario.email}</td>
+                <td>${usuario.estado}</td>
+                <td>${usuario.idRol}</td>
+            `;
+            tbody.appendChild(fila);
+        });
+    }
 
-    <!-- Page level custom scripts -->
-    <script src="js/demo/datatables-demo.js"></script>
+    async function buscarUsuario() {
+        const id = document.getElementById("buscarId").value;
+        const res = await fetch(API + "/" + id);
+        const data = await res.json();
+        document.getElementById("resultado").innerHTML = "<pre>" + JSON.stringify(data, null, 2) + "</pre>";
+    }
+
+    async function actualizarUsuario() {
+        const id = document.getElementById("updateId").value;
+        const data = {
+            username: document.getElementById("updateUsername").value,
+            email: document.getElementById("updateEmail").value,
+            estado: document.getElementById("updateEstado").value,
+            password: document.getElementById("updatePassword").value,
+            idRol: parseInt(document.getElementById("updateIdRol").value)
+        };
+        const res = await fetch(API + "/" + id, {
+            method: "PUT",
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify(data)
+        });
+        alert(await res.text());
+    }
+
+    async function eliminarUsuario() {
+        const id = document.getElementById("deleteId").value;
+        const res = await fetch(API + "/" + id, { method: "DELETE" });
+        alert(await res.text());
+    }
+</script>
 
 </body>
-
 </html>

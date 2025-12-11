@@ -10,220 +10,293 @@
     <!-- Fuentes y Estilos -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700,800,900" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-sb-admin-2/4.1.4/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-sb-admin-2/4.1.4/css/sb-admin-2.min.css"
+        rel="stylesheet">
 
     <style>
-        body { font-family: "Nunito", sans-serif; background-color: #f4f6f9; }
-        .sidebar { background: linear-gradient(180deg, #4e73df 10%, #224abe 100%) !important; }
-        .sidebar .nav-item .nav-link { padding: 12px 20px; border-radius: 8px; transition: 0.2s; }
-        .sidebar .nav-item .nav-link:hover { background-color: rgba(255,255,255,0.15); transform: translateX(5px); }
-        .card { border-radius: 16px !important; border: none; transition: 0.25s; }
-        .card:hover { transform: translateY(-4px); box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); }
+        body {
+            font-family: "Nunito", sans-serif;
+            background-color: #f4f6f9;
+        }
+
+        .sidebar {
+            background: linear-gradient(180deg, #4e73df 10%, #224abe 100%) !important;
+        }
+
+        .sidebar .nav-item .nav-link {
+            padding: 12px 20px;
+            border-radius: 8px;
+            transition: 0.2s;
+        }
+
+        .sidebar .nav-item .nav-link:hover {
+            background-color: rgba(255, 255, 255, 0.15);
+            transform: translateX(5px);
+        }
+
+        .card {
+            border-radius: 16px !important;
+            border: none;
+            transition: 0.25s;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        footer {
+            border-top: 1px solid #ddd;
+        }
     </style>
 </head>
 
 <body id="page-top">
-<div id="wrapper">
+    <div id="wrapper">
 
-    <!-- Sidebar -->
-    <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-            <div class="sidebar-brand-text mx-3">Instituto</div>
-        </a>
-        <hr class="sidebar-divider">
-        <div class="sidebar-heading">Gestión Académica</div>
-        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-    <li class="nav-item"><a class="nav-link" href="rol.html">Roles</a></li>
-    <li class="nav-item"><a class="nav-link" href="usuario.html">Usuarios</a></li>
-    <li class="nav-item"><a class="nav-link" href="profesor.html">Profesores</a></li>
-    <li class="nav-item"><a class="nav-link" href="carrera.html">Carreras</a></li>
-    <li class="nav-item"><a class="nav-link" href="curso.html">Cursos</a></li>
-    <li class="nav-item"><a class="nav-link" href="encargado.html">Encargados</a></li>
-    <li class="nav-item active"><a class="nav-link" href="encargado_estudiante.html">Encargados - Estudiante</a></li>
-    <li class="nav-item"><a class="nav-link" href="estudiante.html">Estudiantes</a></li>
-    <li class="nav-item"><a class="nav-link" href="matricula.html">Matrícula</a></li>
-    <li class="nav-item"><a class="nav-link" href="pago.html">Pagos</a></li>
-    <li class="nav-item"><a class="nav-link" href="tipo_pago.html">Tipos de Pago</a></li>
-    <li class="nav-item"><a class="nav-link" href="calificacion.html">Calificaciones</a></li>
-    <li class="nav-item"><a class="nav-link" href="asistencia.html">Asistencias</a></li>
-        <hr class="sidebar-divider d-none d-md-block">
-    </ul>
-    <!-- End Sidebar -->
+        <!-- Sidebar -->
+        <ul class="navbar-nav sidebar sidebar-dark accordion" id="accordionSidebar">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
+                <div class="sidebar-brand-text mx-3">Instituto</div>
+            </a>
+            <hr class="sidebar-divider">
+            <div class="sidebar-heading">Gestión Académica</div>
+            <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="rol.html">Roles</a></li>
+            <li class="nav-item"><a class="nav-link" href="usuario.html">Usuarios</a></li>
+            <li class="nav-item"><a class="nav-link" href="profesor.html">Profesores</a></li>
+            <li class="nav-item"><a class="nav-link" href="carrera.html">Carreras</a></li>
+            <li class="nav-item"><a class="nav-link" href="curso.html">Cursos</a></li>
+            <li class="nav-item"><a class="nav-link" href="encargado.html">Encargados</a></li>
+            <li class="nav-item"><a class="nav-link" href="estudiante.html">Estudiantes</a></li>
+            <li class="nav-item"><a class="nav-link" href="matricula.html">Matrícula</a></li>
+            <li class="nav-item"><a class="nav-link" href="pago.html">Pagos</a></li>
+            <li class="nav-item"><a class="nav-link" href="tipo_pago.html">Tipos de Pago</a></li>
+            <li class="nav-item"><a class="nav-link" href="calificacion.html">Calificaciones</a></li>
+            <li class="nav-item"><a class="nav-link" href="asistencia.html">Asistencias</a></li>
+            <hr class="sidebar-divider d-none d-md-block">
+        </ul>
+        <!-- End Sidebar -->
 
-    <!-- Content Wrapper -->
-    <div id="content-wrapper" class="d-flex flex-column">
-        <div id="content">
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+            <div id="content">
 
-            <!-- Topbar -->
-            <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 shadow">
-                <form class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 navbar-search">
-                    <div class="input-group">
-                        <input type="text" class="form-control bg-light border-0 small" placeholder="Buscar estudiante...">
-                        <div class="input-group-append">
-                            <button class="btn btn-primary" type="button"><i class="fas fa-search fa-sm"></i></button>
+                <!-- Topbar -->
+                <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 shadow">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown no-arrow">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Administrador</span>
+                                <img class="img-profile rounded-circle" src="img/profile.svg">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in">
+                                <a class="dropdown-item" href="#">Perfil</a>
+                                <a class="dropdown-item" href="#">Configuración</a>
+                                <div class="dropdown-divider"></div>
+                                <a class="dropdown-item text-danger" href="login.html">Cerrar sesión</a>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- End Topbar -->
+
+                <!-- Contenido Principal -->
+                <div class="container-fluid">
+                    <h1 class="h3 mb-4 text-gray-800">Gestión de Estudiantes</h1>
+
+                    <!-- Registrar Estudiante -->
+                    <div class="card mb-4">
+                        <div class="card-header bg-success text-white">Registrar Estudiante</div>
+                        <div class="card-body">
+                            <input id="nombreEstudiante" type="text" class="form-control mb-2" placeholder="Nombre">
+                            <input id="apellidoEstudiante" type="text" class="form-control mb-2" placeholder="Apellidos">
+                            <input id="emailEstudiante" type="email" class="form-control mb-2" placeholder="Email">
+                            <input id="fechaNacimientoEstudiante" type="date" class="form-control mb-2">
+                            <input id="telefonoEstudiante" type="text" class="form-control mb-2" placeholder="Teléfono">
+                            <input id="direccionEstudiante" type="text" class="form-control mb-2" placeholder="Dirección">
+                            <input id="idCarreraEstudiante" type="number" class="form-control mb-2" placeholder="ID Carrera">
+                            <button onclick="crearEstudiante()" class="btn btn-success">Registrar</button>
                         </div>
                     </div>
-                </form>
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item dropdown no-arrow">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown">
-                            <span class="mr-2 d-none d-lg-inline text-gray-600 small">Administrador</span>
-                            <img class="img-profile rounded-circle" src="img/profile.svg">
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in">
-                            <a class="dropdown-item" href="#">Perfil</a>
-                            <a class="dropdown-item" href="#">Configuración</a>
-                            <div class="dropdown-divider"></div>
-                            <a class="dropdown-item text-danger" href="login.html">Cerrar sesión</a>
-                        </div>
-                    </li>
-                </ul>
-            </nav>
-            <!-- End Topbar -->
 
-            <!-- Contenido Principal -->
-            <div class="container-fluid">
-                <h1 class="h3 mb-4 text-gray-800">Gestión de Estudiantes</h1>
-
-                <!-- Registrar Estudiante -->
-                <div class="card mb-4">
-                    <div class="card-header bg-success text-white">Registrar Estudiante</div>
-                    <div class="card-body">
-                        <input id="nombreEstudiante" type="text" class="form-control mb-2" placeholder="Nombre">
-                        <input id="apellidoEstudiante" type="text" class="form-control mb-2" placeholder="Apellidos">
-                        <input id="emailEstudiante" type="email" class="form-control mb-2" placeholder="Email">
-                        <input id="fechaNacimientoEstudiante" type="date" class="form-control mb-2">
-                        <input id="telefonoEstudiante" type="text" class="form-control mb-2" placeholder="Teléfono">
-                        <input id="direccionEstudiante" type="text" class="form-control mb-2" placeholder="Dirección">
-                        <input id="idCarreraEstudiante" type="number" class="form-control mb-2" placeholder="ID Carrera">
-                        <button onclick="crearEstudiante()" class="btn btn-success">Registrar</button>
-                    </div>
-                </div>
-
-                <!-- Listar Estudiantes -->
-                <div class="card mb-4">
-                    <div class="card-header bg-info text-white">Estudiantes Registrados</div>
-                    <div class="card-body">
-                        <button onclick="listarEstudiantes()" class="btn btn-primary mb-3">Cargar Estudiantes</button>
-                        <div class="table-responsive" style="max-height:400px; overflow:auto;">
-                            <table class="table table-striped table-bordered" id="tablaEstudiantes">
-                                <thead class="table-dark text-center">
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Nombre</th>
-                                        <th>Apellidos</th>
-                                        <th>Email</th>
-                                        <th>Fecha de Nacimiento</th>
-                                        <th>Teléfono</th>
-                                        <th>Dirección</th>
-                                        <th>ID Carrera</th>
-                                    </tr>
-                                </thead>
-                                <tbody class="text-center"></tbody>
-                            </table>
+                    <!-- Listar Estudiantes -->
+                    <div class="card mb-4">
+                        <div class="card-header bg-info text-white">Estudiantes Registrados</div>
+                        <div class="card-body">
+                            <button onclick="listarEstudiantes()" class="btn btn-primary mb-3">Cargar Estudiantes</button>
+                            <div class="table-responsive" style="max-height:400px; overflow:auto;">
+                                <table class="table table-striped table-bordered" id="tablaEstudiantes">
+                                    <thead class="table-dark text-center">
+                                        <tr>
+                                            <th>ID</th>
+                                            <th>Nombre</th>
+                                            <th>Apellidos</th>
+                                            <th>Email</th>
+                                            <th>Fecha de Nacimiento</th>
+                                            <th>Teléfono</th>
+                                            <th>Dirección</th>
+                                            <th>Carrera</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="text-center"></tbody>
+                                </table>
+                            </div>
                         </div>
                     </div>
-                </div>
 
-                <!-- Actualizar Estudiante -->
-                <div class="card mb-4">
-                    <div class="card-header bg-warning text-dark">Actualizar Estudiante</div>
-                    <div class="card-body">
-                        <input id="updateIdEstudiante" type="number" class="form-control mb-2" placeholder="ID del estudiante">
-                        <input id="updateNombreEstudiante" type="text" class="form-control mb-2" placeholder="Nuevo nombre">
-                        <input id="updateApellidoEstudiante" type="text" class="form-control mb-2" placeholder="Nuevos apellidos">
-                        <input id="updateEmailEstudiante" type="email" class="form-control mb-2" placeholder="Nuevo email">
-                        <input id="updateFechaNacimientoEstudiante" type="date" class="form-control mb-2">
-                        <input id="updateTelefonoEstudiante" type="text" class="form-control mb-2" placeholder="Nuevo teléfono">
-                        <input id="updateDireccionEstudiante" type="text" class="form-control mb-2" placeholder="Nueva dirección">
-                        <input id="updateIdCarreraEstudiante" type="number" class="form-control mb-2" placeholder="Nuevo ID Carrera">
-                        <button onclick="actualizarEstudiante()" class="btn btn-warning">Actualizar</button>
+                    <!-- Actualizar Estudiante -->
+                    <div class="card mb-4">
+                        <div class="card-header bg-warning text-dark">Actualizar Estudiante</div>
+                        <div class="card-body">
+                            <input id="updateIdEstudiante" type="number" class="form-control mb-2" placeholder="ID del estudiante">
+                            <input id="updateNombreEstudiante" type="text" class="form-control mb-2" placeholder="Nuevo nombre">
+                            <input id="updateApellidoEstudiante" type="text" class="form-control mb-2" placeholder="Nuevos apellidos">
+                            <input id="updateEmailEstudiante" type="email" class="form-control mb-2" placeholder="Nuevo email">
+                            <input id="updateFechaNacimientoEstudiante" type="date" class="form-control mb-2">
+                            <input id="updateTelefonoEstudiante" type="text" class="form-control mb-2" placeholder="Nuevo teléfono">
+                            <input id="updateDireccionEstudiante" type="text" class="form-control mb-2" placeholder="Nueva dirección">
+                            <input id="updateIdCarreraEstudiante" type="number" class="form-control mb-2" placeholder="Nuevo ID Carrera">
+                            <button onclick="actualizarEstudiante()" class="btn btn-warning">Actualizar</button>
+                        </div>
                     </div>
-                </div>
 
-                <!-- Eliminar Estudiante -->
-                <div class="card mb-4">
-                    <div class="card-header bg-danger text-white">Eliminar Estudiante</div>
-                    <div class="card-body">
-                        <input id="deleteIdEstudiante" type="number" class="form-control mb-2" placeholder="ID a eliminar">
-                        <button onclick="eliminarEstudiante()" class="btn btn-danger">Eliminar</button>
+                    <!-- Eliminar Estudiante -->
+                    <div class="card mb-4">
+                        <div class="card-header bg-danger text-white">Eliminar Estudiante</div>
+                        <div class="card-body">
+                            <input id="deleteIdEstudiante" type="number" class="form-control mb-2" placeholder="ID a eliminar">
+                            <button onclick="eliminarEstudiante()" class="btn btn-danger">Eliminar</button>
+                        </div>
                     </div>
+
                 </div>
+                <!-- End Contenido Principal -->
 
             </div>
-            <!-- End Contenido Principal -->
+            <!-- End Main Content -->
 
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container text-center">
+                    <span>© Instituto Académico 2025 - Todos los derechos reservados</span>
+                </div>
+            </footer>
+            <!-- End Footer -->
         </div>
-        <!-- End Main Content -->
-
-        <!-- Footer -->
-        <footer class="sticky-footer bg-white">
-            <div class="container text-center">
-                <span>© Instituto Académico 2025 - Todos los derechos reservados</span>
-            </div>
-        </footer>
-        <!-- End Footer -->
+        <!-- End Content Wrapper -->
     </div>
-    <!-- End Content Wrapper -->
-</div>
-<!-- End Page Wrapper -->
+    <!-- End Page Wrapper -->
 
-<!-- Scripts -->
-<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-sb-admin-2/4.1.4/js/sb-admin-2.min.js"></script>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-sb-admin-2/4.1.4/js/sb-admin-2.min.js"></script>
 
-<script>
-const API_ESTUDIANTES = "http://localhost:3000/estudiante";
+    <script>
+        const API_ESTUDIANTES = "http://localhost:3000/estudiantes";
 
-async function crearEstudiante() {
-    const data = {
-        nombre: document.getElementById("nombreEstudiante").value,
-        apellidos: document.getElementById("apellidoEstudiante").value,
-        email: document.getElementById("emailEstudiante").value,
-        fechaNacimiento: document.getElementById("fechaNacimientoEstudiante").value,
-        telefono: document.getElementById("telefonoEstudiante").value,
-        direccion: document.getElementById("direccionEstudiante").value,
-        idCarrera: parseInt(document.getElementById("idCarreraEstudiante").value)
-    };
-    const res = await fetch(API_ESTUDIANTES, {method:"POST", headers:{'Content-Type':'application/json'}, body:JSON.stringify(data)});
-    alert(await res.text());
-}
+        function formatDate(fecha) {
+            if (!fecha) return "";
+            const d = new Date(fecha);
+            const month = (d.getMonth() + 1).toString().padStart(2, '0');
+            const day = d.getDate().toString().padStart(2, '0');
+            return `${d.getFullYear()}-${month}-${day}`;
+        }
 
-async function listarEstudiantes() {
-    const res = await fetch(API_ESTUDIANTES);
-    const data = await res.json();
-    const tbody = document.getElementById("tablaEstudiantes").getElementsByTagName("tbody")[0];
-    tbody.innerHTML = "";
-    data.forEach(item => {
-        const fila = document.createElement("tr");
-        fila.innerHTML = `<td>${item.id}</td><td>${item.nombre}</td><td>${item.apellidos}</td><td>${item.email}</td>
-                          <td>${item.fechaNacimiento}</td><td>${item.telefono}</td><td>${item.direccion}</td><td>${item.idCarrera}</td>`;
-        tbody.appendChild(fila);
-    });
-}
+        async function crearEstudiante() {
+            const data = {
+                nombre: document.getElementById("nombreEstudiante").value,
+                apellidos: document.getElementById("apellidoEstudiante").value,
+                email: document.getElementById("emailEstudiante").value,
+                fecha_nacimiento: document.getElementById("fechaNacimientoEstudiante").value,
+                telefono: document.getElementById("telefonoEstudiante").value,
+                direccion: document.getElementById("direccionEstudiante").value,
+                idCarrera: parseInt(document.getElementById("idCarreraEstudiante").value)
+            };
+            try {
+                const res = await fetch(`${API_ESTUDIANTES}/create`, {
+                    method: "POST",
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                alert(await res.json().then(r => r.message));
+                listarEstudiantes();
+            } catch (error) {
+                console.error(error);
+                alert("Error al crear estudiante");
+            }
+        }
 
-async function actualizarEstudiante() {
-    const id = document.getElementById("updateIdEstudiante").value;
-    const data = {
-        nombre: document.getElementById("updateNombreEstudiante").value,
-        apellidos: document.getElementById("updateApellidoEstudiante").value,
-        email: document.getElementById("updateEmailEstudiante").value,
-        fechaNacimiento: document.getElementById("updateFechaNacimientoEstudiante").value,
-        telefono: document.getElementById("updateTelefonoEstudiante").value,
-        direccion: document.getElementById("updateDireccionEstudiante").value,
-        idCarrera: parseInt(document.getElementById("updateIdCarreraEstudiante").value)
-    };
-    const res = await fetch(API_ESTUDIANTES + "/" + id, {method:"PUT", headers:{'Content-Type':'application/json'}, body:JSON.stringify(data)});
-    alert(await res.text());
-}
+        async function listarEstudiantes() {
+            try {
+                const res = await fetch(API_ESTUDIANTES);
+                if (!res.ok) throw new Error("Error al obtener estudiantes");
+                const data = await res.json();
+                const tbody = document.getElementById("tablaEstudiantes").getElementsByTagName("tbody")[0];
+                tbody.innerHTML = "";
 
-async function eliminarEstudiante() {
-    const id = document.getElementById("deleteIdEstudiante").value;
-    const res = await fetch(API_ESTUDIANTES + "/" + id, {method:"DELETE"});
-    alert(await res.text());
-}
-</script>
+                data.forEach(item => {
+                    const fila = document.createElement("tr");
+                    fila.innerHTML = `
+                        <td>${item.id}</td>
+                        <td>${item.nombre}</td>
+                        <td>${item.apellidos}</td>
+                        <td>${item.email || ''}</td>
+                        <td>${item.fecha_nacimiento ? formatDate(item.fecha_nacimiento) : ''}</td>
+                        <td>${item.telefono || ''}</td>
+                        <td>${item.direccion || ''}</td>
+                        <td>${item.carrera ? item.carrera.nombre : item.idCarrera}</td>
+                    `;
+                    tbody.appendChild(fila);
+                });
+            } catch (error) {
+                console.error(error);
+                alert("Error al listar estudiantes");
+            }
+        }
+
+        async function actualizarEstudiante() {
+            const id = document.getElementById("updateIdEstudiante").value;
+            const data = {
+                nombre: document.getElementById("updateNombreEstudiante").value,
+                apellidos: document.getElementById("updateApellidoEstudiante").value,
+                email: document.getElementById("updateEmailEstudiante").value,
+                fecha_nacimiento: document.getElementById("updateFechaNacimientoEstudiante").value,
+                telefono: document.getElementById("updateTelefonoEstudiante").value,
+                direccion: document.getElementById("updateDireccionEstudiante").value,
+                idCarrera: parseInt(document.getElementById("updateIdCarreraEstudiante").value)
+            };
+            try {
+                const res = await fetch(`${API_ESTUDIANTES}/${id}`, {
+                    method: "PUT",
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                alert(await res.json().then(r => r.message));
+                listarEstudiantes();
+            } catch (error) {
+                console.error(error);
+                alert("Error al actualizar estudiante");
+            }
+        }
+
+        async function eliminarEstudiante() {
+            const id = document.getElementById("deleteIdEstudiante").value;
+            if (!id) { alert("Ingresa un ID para eliminar"); return; }
+            try {
+                const res = await fetch(`${API_ESTUDIANTES}/${id}`, { method: "DELETE" });
+                alert(await res.json().then(r => r.message));
+                listarEstudiantes();
+            } catch (error) {
+                console.error(error);
+                alert("Error al eliminar estudiante");
+            }
+        }
+
+        window.addEventListener('DOMContentLoaded', listarEstudiantes);
+    </script>
 
 </body>
+
 </html>

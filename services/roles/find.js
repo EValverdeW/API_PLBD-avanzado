@@ -1,14 +1,31 @@
 const db = require('../../models');
-
+ 
 async function findAll() {
-    const roles = await db.rol.findAll();
-    return roles.map(r => r.get({ plain: true }));
+    return await db.rol.findAll({
+        attributes: [
+            ['id', 'ID'],
+            ['cargo', 'NOMBRE'],
+            ['estado', 'ESTADO'],
+            ['created_at', 'FECHA_CREACION'],
+            ['updated_at', 'FECHA_ACTUALIZACION'],
+            ['deleted_at', 'FECHA_ELIMINACION']
+        ],
+        raw: true
+    });
 }
-
+ 
 async function findById(id) {
-    const rol = await db.rol.findByPk(id);
-    if (!rol) throw new Error('Rol no encontrado');
-    return rol.get({ plain: true });
+    return await db.rol.findByPk(id, {
+        attributes: [
+            ['id', 'ID'],
+            ['cargo', 'NOMBRE'],
+            ['estado', 'ESTADO'],
+            ['created_at', 'FECHA_CREACION'],
+            ['updated_at', 'FECHA_ACTUALIZACION'],
+            ['deleted_at', 'FECHA_ELIMINACION']
+        ],
+        raw: true
+    });
 }
-
+ 
 module.exports = { findAll, findById };

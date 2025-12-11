@@ -14,40 +14,13 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-sb-admin-2/4.1.4/css/sb-admin-2.min.css" rel="stylesheet">
 
     <style>
-        body {
-            font-family: "Nunito", sans-serif;
-            background-color: #f4f6f9;
-        }
-
-        .sidebar {
-            background: linear-gradient(180deg, #4e73df 10%, #224abe 100%) !important;
-        }
-
-        .sidebar .nav-item .nav-link {
-            padding: 12px 20px;
-            border-radius: 8px;
-            transition: 0.2s;
-        }
-
-        .sidebar .nav-item .nav-link:hover {
-            background-color: rgba(255,255,255,0.15);
-            transform: translateX(5px);
-        }
-
-        .card {
-            border-radius: 16px !important;
-            border: none;
-            transition: 0.25s;
-        }
-
-        .card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-        }
-
-        footer {
-            border-top: 1px solid #ddd;
-        }
+        body { font-family: "Nunito", sans-serif; background-color: #f4f6f9; }
+        .sidebar { background: linear-gradient(180deg, #4e73df 10%, #224abe 100%) !important; }
+        .sidebar .nav-item .nav-link { padding: 12px 20px; border-radius: 8px; transition: 0.2s; }
+        .sidebar .nav-item .nav-link:hover { background-color: rgba(255,255,255,0.15); transform: translateX(5px); }
+        .card { border-radius: 16px !important; border: none; transition: 0.25s; }
+        .card:hover { transform: translateY(-4px); box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); }
+        footer { border-top: 1px solid #ddd; }
     </style>
 </head>
 <body id="page-top">
@@ -60,20 +33,20 @@
         </a>
         <hr class="sidebar-divider">
         <div class="sidebar-heading">Gestión Académica</div>
-         <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
-            <li class="nav-item"><a class="nav-link" href="rol.html">Roles</a></li>
-            <li class="nav-item"><a class="nav-link" href="usuario.html">Usuarios</a></li>
-            <li class="nav-item"><a class="nav-link" href="profesor.html">Profesores</a></li>
-            <li class="nav-item"><a class="nav-link" href="carrera.html">Carreras</a></li>
-            <li class="nav-item"><a class="nav-link" href="curso.html">Cursos</a></li>
-            <li class="nav-item"><a class="nav-link" href="encargado.html">Encargados</a></li>
-            <li class="nav-item"><a class="nav-link" href="encargado_estudiante.html">Encargados_estudiante</a></li>
-            <li class="nav-item"><a class="nav-link" href="estudiante.html">Estudiantes</a></li>
-            <li class="nav-item"><a class="nav-link" href="matricula.html">Matrícula</a></li>
-            <li class="nav-item"><a class="nav-link" href="pago.html">Pagos</a></li>
-            <li class="nav-item"><a class="nav-link" href="tipo_pago.html">Tipos de Pago</a></li>
-            <li class="nav-item"><a class="nav-link" href="calificacion.html">Calificaciones</a></li>
-            <li class="nav-item"><a class="nav-link" href="asistencia.html">Asistencias</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html">Inicio</a></li>
+        <li class="nav-item"><a class="nav-link" href="rol.html">Roles</a></li>
+        <li class="nav-item"><a class="nav-link" href="usuario.html">Usuarios</a></li>
+        <li class="nav-item"><a class="nav-link" href="profesor.html">Profesores</a></li>
+        <li class="nav-item"><a class="nav-link" href="carrera.html">Carreras</a></li>
+        <li class="nav-item"><a class="nav-link" href="curso.html">Cursos</a></li>
+        <li class="nav-item"><a class="nav-link" href="encargado.html">Encargados</a></li>
+        <li class="nav-item"><a class="nav-link" href="encargado_estudiante.html">Encargados_estudiante</a></li>
+        <li class="nav-item"><a class="nav-link" href="estudiante.html">Estudiantes</a></li>
+        <li class="nav-item"><a class="nav-link" href="matricula.html">Matrícula</a></li>
+        <li class="nav-item"><a class="nav-link" href="pago.html">Pagos</a></li>
+        <li class="nav-item"><a class="nav-link" href="tipo_pago.html">Tipos de Pago</a></li>
+        <li class="nav-item"><a class="nav-link" href="calificacion.html">Calificaciones</a></li>
+        <li class="nav-item"><a class="nav-link" href="asistencia.html">Asistencias</a></li>
         <hr class="sidebar-divider d-none d-md-block">
     </ul>
     <!-- FIN SIDEBAR -->
@@ -209,26 +182,41 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/startbootstrap-sb-admin-2/4.1.4/js/sb-admin-2.min.js"></script>
 
 <script>
-const API = "http://localhost:3000/asistencia";
+const API_CREATE = "http://localhost:3000/asistencias/create";
+const API_FINDALL = "http://localhost:3000/asistencias/";
+const API_DELETE = (id) => `http://localhost:3000/asistencias/${id}`;
+const API_UPDATE = (id) => `http://localhost:3000/asistencias/${id}`;
 
 async function crearAsistencia() {
-    const data = {
-        fecha: document.getElementById("fecha").value,
-        estado: document.getElementById("estado").value,
-        idMatricula: parseInt(document.getElementById("idMatricula").value)
-    };
-    const res = await fetch(API, {method:"POST", headers:{'Content-Type':'application/json'}, body:JSON.stringify(data)});
+    const fecha = document.getElementById("fecha").value;
+    const estado = document.getElementById("estado").value;
+    const idMatricula = parseInt(document.getElementById("idMatricula").value);
+
+    if (!fecha || !estado || !idMatricula) {
+        alert("Todos los campos son obligatorios");
+        return;
+    }
+
+    const data = { FECHA: fecha, ESTADO: estado, ID_MATRICULA: idMatricula };
+
+    const res = await fetch(API_CREATE, {
+        method: "POST",
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify(data)
+    });
+
     alert(await res.text());
 }
 
+
 async function listarAsistencias() {
-    const res = await fetch(API);
+    const res = await fetch(API_FINDALL);
     const data = await res.json();
     const tbody = document.getElementById("tablaAsistencias").getElementsByTagName("tbody")[0];
     tbody.innerHTML = "";
     data.forEach(item => {
         const fila = document.createElement("tr");
-        fila.innerHTML = `<td>${item.id}</td><td>${item.fecha}</td><td>${item.estado}</td><td>${item.idMatricula}</td>`;
+        fila.innerHTML = `<td>${item.ID_ASISTENCIA}</td><td>${item.FECHA}</td><td>${item.ESTADO}</td><td>${item.ID_MATRICULA}</td>`;
         tbody.appendChild(fila);
     });
 }
@@ -236,17 +224,21 @@ async function listarAsistencias() {
 async function actualizarAsistencia() {
     const id = document.getElementById("updateId").value;
     const data = {
-        fecha: document.getElementById("updateFecha").value,
-        estado: document.getElementById("updateEstado").value,
-        idMatricula: parseInt(document.getElementById("updateIdMatricula").value)
+        FECHA: document.getElementById("updateFecha").value,
+        ESTADO: document.getElementById("updateEstado").value,
+        ID_MATRICULA: parseInt(document.getElementById("updateIdMatricula").value)
     };
-    const res = await fetch(API + "/" + id, {method:"PUT", headers:{'Content-Type':'application/json'}, body:JSON.stringify(data)});
+    const res = await fetch(API_UPDATE(id), {
+        method: "PUT",
+        headers: {'Content-Type':'application/json'},
+        body: JSON.stringify(data)
+    });
     alert(await res.text());
 }
 
 async function eliminarAsistencia() {
     const id = document.getElementById("deleteId").value;
-    const res = await fetch(API + "/" + id, {method:"DELETE"});
+    const res = await fetch(API_DELETE(id), {method:"DELETE"});
     alert(await res.text());
 }
 </script>
